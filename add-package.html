@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Tour Package</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="operator-layout">
+
+    <aside class="sidebar">
+
+        <h2>🌴 Tourism System</h2>
+
+        <a href="operator.html">Dashboard</a>
+        <a href="operator.html#packages">Packages</a>
+        <a href="#">Destinations</a>
+        <a href="#">Hotels</a>
+        <a href="#">Vehicles</a>
+        <a href="#">Images</a>
+        <a href="index.html">Logout</a>
+
+    </aside>
+
+
+    <main class="dashboard">
+
+        <h1>Create New Tour Package</h1>
+
+        <div class="form-container">
+
+            <form>
+
+                <label>
+                    Package Name
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Enter package name"
+                >
+
+
+                <label>
+                    Description
+                </label>
+
+                <textarea
+                    placeholder="Enter package description"
+                ></textarea>
+
+
+                <div class="form-row">
+
+                    <div>
+
+                        <label>
+                            Destination
+                        </label>
+
+                        <select>
+
+                            <option>
+                                Select destination
+                            </option>
+
+                            <option>
+                                Boracay
+                            </option>
+
+                            <option>
+                                Cebu
+                            </option>
+
+                            <option>
+                                Baguio
+                            </option>
+
+                            <option>
+                                Palawan
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div>
+
+                        <label>
+                            Duration
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="e.g. 3 Days / 2 Nights"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div>
+
+                        <label>
+                            Price
+                        </label>
+
+                        <input
+                            type="number"
+                            placeholder="₱"
+                        >
+
+                    </div>
+
+
+                    <div>
+
+                        <label>
+                            Available Date
+                        </label>
+
+                        <input
+                            type="date"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- HOTEL -->
+
+                <label>
+                    Hotel
+                </label>
+
+                <select>
+
+                    <option>
+                        Select hotel
+                    </option>
+
+                    <option>
+                        Sample Beach Resort
+                    </option>
+
+                    <option>
+                        Cebu City Hotel
+                    </option>
+
+                </select>
+
+
+                <!-- VEHICLE -->
+
+                <label>
+                    Vehicle
+                </label>
+
+                <select>
+
+                    <option>
+                        Select vehicle
+                    </option>
+
+                    <option>
+                        Tourist Van
+                    </option>
+
+                    <option>
+                        Mini Bus
+                    </option>
+
+                </select>
+
+
+                <!-- ITINERARY -->
+
+                <h2>Itinerary</h2>
+
+                <div class="itinerary-form">
+
+                    <label>
+                        Day 1 Activity
+                    </label>
+
+                    <textarea
+                        placeholder="Enter Day 1 activities"
+                    ></textarea>
+
+
+                    <label>
+                        Day 2 Activity
+                    </label>
+
+                    <textarea
+                        placeholder="Enter Day 2 activities"
+                    ></textarea>
+
+
+                    <label>
+                        Day 3 Activity
+                    </label>
+
+                    <textarea
+                        placeholder="Enter Day 3 activities"
+                    ></textarea>
+
+                </div>
+
+
+                <!-- INCLUSIONS -->
+
+                <h2>Package Inclusions</h2>
+
+                <div class="checkboxes">
+
+                    <label>
+                        <input type="checkbox">
+                        Hotel Accommodation
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Transportation
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Meals
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Tour Guide
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Activities
+                    </label>
+
+                </div>
+
+
+                <div class="form-buttons">
+
+                    <a
+                        href="operator.html"
+                        class="secondary-button"
+                    >
+                        Cancel
+                    </a>
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                    >
+                        Save Draft
+                    </button>
+
+                    <button
+                        type="button"
+                        class="primary-button"
+                    >
+                        Publish Package
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
