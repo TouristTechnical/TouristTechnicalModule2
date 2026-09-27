@@ -1,0 +1,193 @@
+/* ================= CONTENT ================= */
+
+.content {
+    padding: 50px 7%;
+}
+
+
+/* ================= INFO BOX ================= */
+
+.info-box {
+    background: #f5f8fc;
+    border-left: 4px solid #0759a5;
+
+    padding: 15px;
+    margin: 10px 0 25px;
+
+    border-radius: 5px;
+}
+
+
+/* ================= INCLUSIONS ================= */
+
+.inclusions {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.inclusions li {
+    margin: 8px 0;
+}
+
+
+/* ================= MODULE NOTE ================= */
+
+.module-note {
+    font-size: 13px;
+    color: #777;
+    margin-top: 12px;
+}
+
+
+/* ================= SECONDARY BUTTON ================= */
+
+.secondary-button {
+    display: inline-block;
+
+    background: white;
+    color: #0759a5;
+
+    border: 1px solid #0759a5;
+
+    padding: 12px 22px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+}
+
+.secondary-button:hover {
+    background: #eef6ff;
+}
+
+
+/* ================= FORM ================= */
+
+.form-container {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    max-width: 900px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.form-container label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-top: 18px;
+
+    margin-bottom: 7px;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-family: Arial, sans-serif;
+}
+
+.form-container textarea {
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+
+/* ================= FORM ROW ================= */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* ================= CHECKBOXES ================= */
+
+.checkboxes {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin-top: 15px;
+}
+
+.checkboxes label {
+    margin: 0;
+
+    font-weight: normal;
+}
+
+.checkboxes input {
+    width: auto;
+}
+
+
+/* ================= FORM BUTTONS ================= */
+
+.form-buttons {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+.form-buttons button {
+    border: none;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* ================= OPERATOR LINKS ================= */
+
+.sidebar a {
+    cursor: pointer;
+}
+
+
+/* ================= RESPONSIVE FORM ================= */
+
+@media (max-width: 700px) {
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .checkboxes {
+        grid-template-columns: 1fr;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+}
