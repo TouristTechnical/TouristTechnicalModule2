@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Operator Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="operator-layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h2>🌴 Tourism System</h2>
+
+        <a href="operator.html">Dashboard</a>
+
+        <a href="#packages">
+            Packages
+        </a>
+
+        <a href="#">
+            Destinations
+        </a>
+
+        <a href="#">
+            Hotels
+        </a>
+
+        <a href="#">
+            Vehicles
+        </a>
+
+        <a href="#">
+            Images
+        </a>
+
+        <a href="index.html">
+            Logout
+        </a>
+
+    </aside>
+
+
+    <!-- DASHBOARD -->
+
+    <main class="dashboard">
+
+        <h1>Welcome, Tour Operator!</h1>
+
+        <p>
+            Manage your tourism packages and package information.
+        </p>
+
+
+        <!-- STATISTICS -->
+
+        <div class="statistics">
+
+            <div class="stat-card">
+
+                <h3>Total Packages</h3>
+
+                <strong>12</strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h3>Active</h3>
+
+                <strong>10</strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <h3>Draft</h3>
+
+                <strong>2</strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- PACKAGE MANAGEMENT -->
+
+        <div class="management" id="packages">
+
+            <div class="management-header">
+
+                <h2>Manage Tour Packages</h2>
+
+                <a
+                    href="add-package.html"
+                    class="primary-button"
+                >
+                    + Add Package
+                </a>
+
+            </div>
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Package</th>
+                        <th>Destination</th>
+                        <th>Duration</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Boracay Adventure</td>
+                        <td>Boracay</td>
+                        <td>3 Days</td>
+                        <td>₱5,999</td>
+
+                        <td>
+                            <span class="active">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+                            <a
+                                href="add-package.html"
+                                class="small-button"
+                            >
+                                Edit
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Cebu Discovery</td>
+                        <td>Cebu</td>
+                        <td>4 Days</td>
+                        <td>₱7,999</td>
+
+                        <td>
+                            <span class="active">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+                            <a
+                                href="add-package.html"
+                                class="small-button"
+                            >
+                                Edit
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Baguio Escape</td>
+                        <td>Baguio</td>
+                        <td>2 Days</td>
+                        <td>₱3,999</td>
+
+                        <td>
+                            <span class="draft">
+                                Draft
+                            </span>
+                        </td>
+
+                        <td>
+                            <a
+                                href="add-package.html"
+                                class="small-button"
+                            >
+                                Edit
+                            </a>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
