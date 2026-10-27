@@ -1,0 +1,14 @@
+/* TouristTechnical browser configuration. Publishable keys are safe for browser use when RLS is configured. NEVER put an sb_secret_ key here. */
+(function(){
+  const SUPABASE_URL = 'https://oghcvfqkfhdvnmzlvydt.supabase.co';
+  const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_rS0dOWiYK_j6jcS9vpNp0Q_A2I2VoYz';
+  if (window.supabase && SUPABASE_PUBLISHABLE_KEY !== 'sb_publishable_rS0dOWiYK_j6jcS9vpNp0Q_A2I2VoYz') {
+    window.supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+  } else {
+    window.supabaseClient = null;
+  }
+})();
+X
+
+dad
+
