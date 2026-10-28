@@ -1,0 +1,134 @@
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create account | TouristTechnical</title>
+  <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+  <main class="auth-card">
+    <h1>Create your account</h1>
+    <p>Register as a TouristTechnical customer.</p>
+
+    <form id="registerForm">
+      <label for="fullName">Full name</label>
+      <input id="fullName" name="fullName"
+             autocomplete="name" required>
+
+      <label for="username">Username</label>
+      <input id="username" name="username"
+             autocomplete="username" minlength="3" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email"
+             autocomplete="email" required>
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password"
+             autocomplete="new-password" minlength="8" required>
+
+      <button id="submitBtn" type="submit">Register</button>
+    </form>
+
+    <p id="message" class="message" role="status"></p>
+
+    <div class="links">
+      <a href="index.html">Back to login</a>
+      <a href="forgot-password.html">Forgot password?</a>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+
+  <script>
+    const form = document.querySelector('#registerForm');
+    const message = document.querySelector('#message');
+    const button = document.querySelector('#submitBtn');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      message.textContent = '';
+      button.disabled = true;
+      button.textContent = 'Registering...';
+
+      const full_name =
+        document.querySelector('#fullName').value.trim();
+
+      const username =
+        document.querySelector('#username').value.trim().toLowerCase();
+
+      const email =
+        document.querySelector('#email').value.trim().toLowerCase();
+
+      const password =
+        document.querySelector('#password').value;
+
+      try {
+        const supabase = window.supabaseClient;
+
+        if (!supabase) {
+          throw new Error(
+            'Supabase did not load. Refresh the page and check your configuration.'
+          );
+        }
+
+        // Create the Supabase authentication account.
+        const { data, error } = await supabase.auth.signUp({
+          email,
+          password,
+          options: {
+            data: {
+              full_name,
+              username
+            }
+          }
+        });
+
+        if (error) throw error;
+
+        if (!data.user) {
+          throw new Error('Supabase did not return a user account.');
+        }
+
+        // Save the user's profile.
+        const { error: profileError } = await supabase
+          .from('profiles')
+          .upsert({
+            id: data.user.id,
+            username,
+            email,
+            full_name,
+            role: 'customer'
+          }, {
+            onConflict: 'id'
+          });
+
+        if (profileError) {
+          throw new Error(
+            'Your account was created, but saving your profile failed: ' +
+            profileError.message
+          );
+        }
+
+        message.textContent =
+          'Account created successfully! You can now sign in.';
+
+        form.reset();
+
+      } catch (error) {
+        message.textContent =
+          error.message || 'Registration failed. Please try again.';
+      } finally {
+        button.disabled = false;
+        button.textContent = 'Register';
+      }
+    });
+  </script>
+</body>
+</html>
+```

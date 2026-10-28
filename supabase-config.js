@@ -1,24 +1,17 @@
+(function () {
+  const SUPABASE_URL = 'https://oghcvfqkfhdvnmzlvydt.supabase.co';
 
-/* TouristTechnical Supabase configuration.
-   Never put an sb_secret_ key here. */
+  // Use your Supabase publishable key or legacy anon key.
+  const SUPABASE_ANON_KEY = 'sb_publishable_rS0dOWiYK_j6jcS9vpNp0Q_A2I2VoYz';
 
-window.TOURISTTECHNICAL_SUPABASE_URL =
-  "https://oghcvfqkfhdvnmzlvydt.supabase.co";
+  if (!window.supabase) {
+    console.error('Supabase library did not load.');
+    return;
+  }
 
-window.TOURISTTECHNICAL_SUPABASE_PUBLISHABLE_KEY =
-  "sb_publishable_rS0dOWiYK_j6jcS9vpNp0Q_A2I2VoYz";
-
-if (
-  window.supabase &&
-  window.TOURISTTECHNICAL_SUPABASE_URL &&
-  window.TOURISTTECHNICAL_SUPABASE_PUBLISHABLE_KEY &&
-  !window.TOURISTTECHNICAL_SUPABASE_PUBLISHABLE_KEY.includes("PASTE_YOUR")
-) {
   window.supabaseClient = window.supabase.createClient(
-    window.TOURISTTECHNICAL_SUPABASE_URL,
-    window.TOURISTTECHNICAL_SUPABASE_PUBLISHABLE_KEY
+    SUPABASE_URL,
+    SUPABASE_ANON_KEY
   );
-} else {
-  window.supabaseClient = null;
-}
+})();
 
