@@ -19,3 +19,30 @@ button:disabled{opacity:.65;cursor:wait;transform:none}
 .destination-card img,.package-image img,.detail-hero>img{background:#dcece9}
 @media print{.site-header,.footer,.steps,.form-card,.btn,.notice{display:none!important}body{background:white}.section{padding:0}.panel{box-shadow:none;border:0}.two-col{display:block}.printable-bill{padding:0}.status-box{break-inside:avoid}}
 @media(max-width:650px){.summary-sticky{position:static}.status-box{grid-template-columns:1fr}.password-wrap{align-items:stretch}}
+
+/* Enhanced booking controls */
+#ttBooking h2{margin-top:24px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+#ttBooking .field small{line-height:1.45}
+#ttBooking input[type="file"]{padding:10px;background:#f8fbfb}
+#ttBooking .addon-option input[type="number"]{padding:8px;border:1px solid var(--line);border-radius:8px}
+#payInstructions{line-height:1.6;overflow-wrap:anywhere}
+#payInstructions .gcash-qr{display:block}
+@media(max-width:650px){#ttBooking .form-grid{grid-template-columns:1fr}.summary-sticky{position:static}}
+
+/* Module 4 payment image sizing */
+#payInstructions .gcash-qr,
+#bankDetails .gcash-qr {
+  display: block;
+  width: min(300px, 100%);
+  height: auto;
+  max-height: 360px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  margin: 16px auto;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+#payInstructions .field { margin-bottom: 14px; }
+#payInstructions select { width: 100%; }
