@@ -29,6 +29,10 @@
       <input id="password" name="password" type="password"
              autocomplete="new-password" minlength="8" required>
 
+      <label for="confirmPassword">Confirm password</label>
+      <input id="confirmPassword" name="confirmPassword" type="password"
+             autocomplete="new-password" minlength="8" required>
+
       <button id="submitBtn" type="submit">Register</button>
     </form>
 
@@ -66,6 +70,11 @@
 
       const password =
         document.querySelector('#password').value;
+      const confirmPassword =
+        document.querySelector('#confirmPassword').value;
+      if (password !== confirmPassword) {
+        throw new Error('The passwords do not match.');
+      }
 
       try {
         const supabase = window.supabaseClient;

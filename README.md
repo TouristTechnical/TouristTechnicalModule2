@@ -13,6 +13,10 @@ A responsive academic tourism information and reservation website focused on bea
 - Login uses the assigned username internally as `username@touristtechnical.test` and reads the role from `profiles`. Customers enter only their username and password.
 - Account roles: `customer` and `admin`. The account records must already exist in Supabase Auth and `profiles`.
 
+## Enhanced booking features
+- The latest package adds selectable transport, hotel/room, restaurant/meal, pickup/drop-off and airport/flight details, an itemized booking estimate, payment proof submission and admin catalog/payment review. See `SUPABASE-SETUP-ENHANCED.md`.
+- The current interactive booking/catalog/payment demo still uses browser `localStorage`; the supplied Supabase SQL is a database foundation, not yet a completed shared-data migration. Do not use for real bookings or accept real payments.
+
 ## Important limitations
 - Supabase Auth login is connected when you add the publishable key. However, package edits, reservations, and payments in this revision are still stored in the current browser's `localStorage`; they are not yet shared across devices or accounts. Do not treat browser-stored roles or records as secure access control. The next integration step is to wire all package/reservation/payment reads and writes to Supabase and verify RLS policies.
 - Payment methods are for manual proof submission only. This site does not move money, confirm a bank transfer, or issue a legally valid tax invoice. Admin must verify a transaction before marking it **Successful payment**. Mark a reservation **completed** only after the trip has actually taken place; the customer bill then shows **Successful trip**.
