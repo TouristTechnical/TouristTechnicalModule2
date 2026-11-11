@@ -22,9 +22,9 @@ const seed={airports:[
  {id:'boholclub',name:'Bohol Beach Club (sample option)',address:'Danao, Panglao, Bohol',amenities:'Beach, pool, restaurant',image:'',available:true,rooms:[{id:'classic',name:'Classic',price:4900,stock:4},{id:'premier',name:'Premier',price:7200,stock:2}]}],
  restaurants:[{id:'resort',name:'Selected hotel / resort restaurant',address:'At selected accommodation'}],
  foods:[
- {id:'bf',name:'Breakfast set',meal:'Breakfast',restaurant:'Selected hotel / resort restaurant',price:350,description:'Sample plated breakfast',image:'',available:true},
- {id:'ln',name:'Lunch set',meal:'Lunch',restaurant:'Selected hotel / resort restaurant',price:450,description:'Sample lunch meal',image:'',available:true},
- {id:'dn',name:'Dinner set',meal:'Dinner',restaurant:'Selected hotel / resort restaurant',price:500,description:'Sample dinner meal',image:'',available:true}]
+ {id:'bf',name:'Breakfast set',meal:'Breakfast',restaurant:'Selected hotel / resort restaurant',price:350,description:'Breakfast',image:'',available:true},
+ {id:'ln',name:'Lunch set',meal:'Lunch',restaurant:'Selected hotel / resort restaurant',price:450,description:'Lunch meal',image:'',available:true},
+ {id:'dn',name:'Dinner set',meal:'Dinner',restaurant:'Selected hotel / resort restaurant',price:500,description:'Dinner meal',image:'',available:true}]
 };
 function read(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}}
 function write(k,v){localStorage.setItem(k,JSON.stringify(v))}
@@ -51,9 +51,9 @@ function paymentConfig(){
   GCash:{name:'Add official GCash account name',number:'Add official GCash mobile number',qr:'assets/gcash-qr.png'},
   Maya:{name:'Add official Maya account name',number:'Add official Maya mobile number',qr:'assets/maya-qr.png'},
   'Bank transfer':{banks:{
-   BPI:{name:'Add official BPI account name',number:'Add official BPI account number',qr:'assets/bpi-instapay.svg'},
-   BDO:{name:'Add official BDO account name',number:'Add official BDO account number',qr:'assets/bdo-instapay.svg'},
-   Metrobank:{name:'Add official Metrobank account name',number:'Add official Metrobank account number',qr:'assets/metrobank-instapay.svg'}
+   BPI:{name:'Add official BPI account name',number:'Add official BPI account number',qr:'assets/bpi-instapay.png'},
+   BDO:{name:'Add official BDO account name',number:'Add official BDO account number',qr:'assets/bdo-instapay.png'},
+   Metrobank:{name:'Add official Metrobank account name',number:'Add official Metrobank account number',qr:'assets/metrobank-instapay.png'}
   }},
   'QR Ph':{name:'Add official QR Ph account name',number:'Add official QR Ph details',qr:'assets/qrph.png'}
  };
